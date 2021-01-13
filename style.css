@@ -200,7 +200,7 @@ select {
 
 #eyecatch {
   height: 700px;
-  background: url(../img/img3/eyecatch.jpg) no-repeat;
+  background: url(img/img3/eyecatch.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -213,8 +213,10 @@ select {
   line-height: 1;
   position: relative;
   top: 60%;
-  left: 60%;
+  left: 40%;
   transform: translate(-50%, -50%);
+  /* 追加 */
+  display: inline-block;
 }
 
 .news-contents {
@@ -276,13 +278,13 @@ select {
   color: #ffffff;
 }
 
-.link {
+#mission .link {
   padding: 5px 10px;
   font-size: 12px;
-  color: #000;
-  background-color: #ffffff;
+  color: black;
+  background-color: white;
   text-decoration: none;
-  border: 1px #black solid;
+  border: 1px black solid;
   transition: 0.4s ease;
 }
 
@@ -346,9 +348,14 @@ select {
   padding: 5px 0;
 }
 
-.link {
+#service .link {
+  width: 100px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
   padding: 5px 10px;
-  color: #000;
+  color: #000000;
+  background-color: #ffffff;
   text-decoration: none;
   border: 1px #000000 solid;
   transition: 0.4s ease;
@@ -405,9 +412,12 @@ select {
   background: #ffffff;
 }
 
-.business-wrap {
+#business .business-wrap {
   display: flex;
   justify-content: space-between;
+}
+
+.company {
   position: relative;
 }
 
@@ -416,38 +426,43 @@ select {
   height: 200px;
 }
 
-.company-text {
+.company .company-text {
   color: white;
+  font-weight: bold;
   text-align: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50% -50%);
+  top: 30%;
+  left: 38%;
 }
 
-.company-text h3 {
-  font-size: 20px;
+.company-text h1 {
+  font-size: 28px;
   font-weight: bold;
+  line-height: 40px;
+}
+
+.recruit {
+  position: relative;
 }
 
 .recruit img {
   width: 600px;
   height: 200px;
-  position: relative;
 }
 
-.recruit-text {
+.recruit .recruit-text {
   color: white;
+  font-weight: bold;
   text-align: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50% -50%);
+  top: 30%;
+  left: 45%;
 }
 
-.recruit-text h3 {
-  font-size: 20px;
+.recruit-text h1 {
+  font-size: 28px;
   font-weight: bold;
+  line-height: 40px;
 }
 
 .faq {
@@ -456,7 +471,7 @@ select {
   height: 150px;
   margin: 100px;
   position: relative;
-  left: 10%;
+  left: 100px;
 }
 
 .faq h1 {
@@ -464,18 +479,21 @@ select {
   font-weight: bold;
   color: white;
   position: absolute;
-  line-height: 150px;
+  display: block;
   left: 10px;
+  top: 45%;
 }
-.link {
+
+.faq .link {
   font-size: 15px;
   color: white;
   background: black;
   text-decoration: none;
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50% -50%);
 }
 
 .link:hover {
@@ -483,8 +501,23 @@ select {
   background: #000000;
 }
 
+/*
+  .faq .link
+  width: 100px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  line-height: 150px;
+  left: 10px; 
+こちらのスタイルによってposition: absoluteのスタイルが原因で
+ボタンの位置を変更することが出来ずにいたのだと思います。
+*/
+
 #contact {
-  background: url(../img/img3/contact-bg.jpg) no-repeat;
+  background: url(img/img3/contact-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: 600px;
@@ -492,6 +525,15 @@ select {
   position: relative;
   text-align: center;
   color: #ffffff;
+  /* 追加 子要素（.contact-text-wrap）の中央寄せ*/
+  display: flex;
+  align-items: center;
+}
+
+/* 追加 */
+.contact-text-wrap {
+  width: 100%;
+  margin: 0 auto;
 }
 
 #contact h1 {
