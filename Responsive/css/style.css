@@ -489,3 +489,94 @@ body {
   text-align: center;
   color: #fff;
 }
+
+@media screen and (max-width: 480px) {
+  @mixin fz($size: 16) {
+    font-size: ($size / 10) + rem;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    top: 15px;
+    right: 20px;
+    transition: 0.4s;
+  }
+
+  #hamburger span {
+    position: absolute;
+    left: 2px;
+    display: block;
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.8s;
+  }
+
+  #hamburger span:nth-of-type(1) {
+    top: 10px;
+  }
+  #hamburger span:nth-of-type(2) {
+    top: 20px;
+  }
+  #hamburger span:nth-of-type(3) {
+    top: 30px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .catchcopy {
+    top: 40%;
+  }
+
+  .news {
+    width: 100%;
+  }
+
+  .mission-content {
+    padding: 20%;
+    width: 100%;
+  }
+
+  .service {
+    height: 1000px;
+  }
+
+  .service-img {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .service-content_inner {
+    top: 80%;
+    width: 90%;
+    left: 0;
+    margin: 0 5%;
+  }
+
+  .service-img_second {
+    width: 90%;
+    margin: 50% 5% 0 5%;
+  }
+
+  .service-content_inner-second {
+    width: 90%;
+  }
+
+  .recruit-company_size {
+    width: 100%;
+  }
+
+  .faq-title {
+    font-size: 30px;
+  }
+}
