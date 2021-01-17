@@ -491,6 +491,8 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+  .none {display: none}
+
   @mixin fz($size: 16) {
     font-size: ($size / 10) + rem;
   }
@@ -536,6 +538,8 @@ body {
 
   .catchcopy {
     top: 40%;
+    left: 0
+    text-align: center;
   }
 
   .news {
@@ -570,6 +574,7 @@ body {
 
   .service-content_inner-second {
     width: 90%;
+    top: 75%;
   }
 
   .recruit-company_size {
@@ -578,5 +583,9 @@ body {
 
   .faq-title {
     font-size: 30px;
+  }
+
+  .top-footer h1 {
+    margin: 0 auto;
   }
 }
